@@ -1,5 +1,5 @@
 #define CLSM_INCLUDES
-#include "cellsim/cellsim.h"
+#include "cellsim.h"
 
 int main(void) {
 	return 0;
