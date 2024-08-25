@@ -13,4 +13,9 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 CMakeUserPresets.json
+
+# customs
 /build
+/cellsim-gui
+build-gui.cmake
+locale.cmake

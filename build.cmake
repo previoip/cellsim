@@ -32,6 +32,7 @@ execute_process(
     WORKING_DIRECTORY "${BUILD_PATH}"
     RESULT_VARIABLE EXIT_STATUS
 )
+
 if(NOT "${EXIT_STATUS}" EQUAL "0")
     message(FATAL_ERROR "${GENERATOR} failed with status ${EXIT_STATUS}.")
 endif()

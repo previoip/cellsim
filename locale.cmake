@@ -1,1 +1,0 @@
-set(GENERATOR "Unix Makefiles")
