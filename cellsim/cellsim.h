@@ -20,23 +20,22 @@ extern "C" {
 #define clsm_free(p) free(p)
 #endif // clsm_free
 
-#define vec2_init(T) (T*)calloc(2, sizeof(T))
-#define vec3_init(T) (T*)calloc(3, sizeof(T))
-
 typedef struct {
-	int id;
-	double* v3pos;
-	double* v3vel;
-	double* v3acc;
-	double* v2hea;
+	float pos[3];
+	float vel[3];
+	float hea[3];
 } clsm_ent;
 
-void clsm_ent_init(clsm_ent* ent) {
-	ent->v3pos = vec3_init(double);
-	ent->v3vel = vec3_init(double);
-	ent->v3acc = vec3_init(double);
-	ent->v2hea = vec2_init(double);
+
+clsm_ent*
+ce_new_ent(void) {
+	clsm_ent* t = (clsm_ent*)clsm_malloc(sizeof(clsm_ent));
+	return t;
 }
+
+
+float
+ce_dist(clsm_ent* src, clsm_ent* dst);
 
 #ifdef __cplusplus
 extern }
